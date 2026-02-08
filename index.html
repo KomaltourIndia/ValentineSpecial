@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+        src="https://cdn.jsdelivr.net/npm/tsparticles-preset-stars@2/tsparticles.preset.stars.bundle.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Background Animation (Optional) -->
+    <div id="particles-js"></div>
+
+    <!-- Page 1: Our Memories (Carousel) -->
+    <section id="page1" class="page active">
+        <div class="content-box">
+            <h1 class="title">Hey You.. Anjali ❤️</h1>
+            <p class="subtitle">Just wanted to show you how special you are to me.</p>
+
+            <div class="carousel-container">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active">
+                    <img src="images/we2_1.jpeg" alt="Us Together"
+                        onerror="this.src='https://placehold.co/300x400?text=Your+Smile'">
+                    <p class="caption">Your smile lights up my whole world ✨</p>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                    <img src="images/we2_2.jpeg" alt="Us Together"
+                        onerror="this.src='https://placehold.co/300x400?text=Every+Moment'">
+                    <p class="caption">Every moment with you is magic 💖</p>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-slide">
+                    <img src="images/img3.jpeg" alt="Us Together"
+                        onerror="this.src='https://placehold.co/300x400?text=Beautiful+You'">
+                    <p class="caption">You are beautiful, inside and out 🌹</p>
+                </div>
+                <!-- Slide 4 -->
+                <div class="carousel-slide">
+                    <img src="images/img4.jpeg" alt="Us Together"
+                        onerror="this.src='https://placehold.co/300x400?text=Lucky+Me'">
+                    <p class="caption">I'm the luckiest person to know you 🍀</p>
+                </div>
+
+                <button class="prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next-btn" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+
+            <button class="next-page-btn" onclick="switchPage('page2')">Continue to Surprise ✨</button>
+        </div>
+    </section>
+
+    <!-- Page 2: The Question -->
+    <section id="page2" class="page">
+        <div class="content-box glass">
+            <h1 class="question-title">I have a question...</h1>
+            <div class="heart-container">
+                <div class="heart"></div>
+            </div>
+            <h2 class="big-question">Will you be my Valentine? 🌹</h2>
+
+            <div class="buttons-container">
+                <button id="yes-btn" onclick="handleYesClick()">YES! ❤️</button>
+                <button id="no-btn" onclick="handleNoClick()">No</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page 3: The Celebration & Message -->
+    <section id="page3" class="page">
+        <div class="content-box glass celebration-box">
+            <h1 class="success-title">YAY! ❤️ I Knew It!</h1>
+            <div class="her-photo-container">
+                <!-- Replace with her best photo -->
+                <img src="images/img2.jpeg" alt="Her Beautiful Photo" class="her-photo"
+                    onerror="this.src='https://placehold.co/150x150?text=Her+Photo'">
+            </div>
+
+            <div class="thinking-cloud">
+                <p>Type your sweet "Yes" note here:</p>
+                <textarea id="love-note" placeholder="Write something sweet... e.g. 'Yes, I'd love to! ❤️'"></textarea>
+            </div>
+
+            <button class="whatsapp-btn" onclick="sendToWhatsApp()">
+                Send your love 💌
+            </button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
