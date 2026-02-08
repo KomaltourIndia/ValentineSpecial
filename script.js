@@ -123,7 +123,10 @@ function sendToWhatsApp() {
         return;
     }
 
-    const encodedMessage = encodeURIComponent(message);
+    // Pre-typed message logic
+    const finalMessage = `I like the way you asked me 🙈💖 \nAnd my answer is: ${message}`;
+
+    const encodedMessage = encodeURIComponent(finalMessage);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
     // Open in new tab
