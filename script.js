@@ -116,7 +116,7 @@ function handleYesClick() {
 // WhatsApp Sending Logic
 function sendToWhatsApp() {
     const message = document.getElementById('love-note').value;
-    const phoneNumber = "919654570967"; // Updated with your number
+    const phoneNumber = "918383996389"; // Updated with your number
 
     if (message.trim() === "") {
         alert("Please write a sweet message first! 🥺");
